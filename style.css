@@ -214,3 +214,27 @@
     color: orange;
     text-decoration: none;
 }
+
+.info {
+    font-size: 3vw;
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    width: 40%;
+    margin: 225px auto;
+}
+
+.info a {
+    color: white;
+}
+
+.info .box {
+    padding: 50px;
+    margin: 10px auto;
+    box-shadow: 0px 0px 10px 2px rgb(53, 53, 53);
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}

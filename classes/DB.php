@@ -82,12 +82,23 @@ class DB {
     }
 
     public function insert($table, $fields = array()) {
-        try {
-            $eh = $this->_pdo->prepare("INSERT INTO `camagru`.`users` (`username`,`password`,`salt`,`name`,`groups`) VALUES (?,?,?,?,1);");
-            $eh->execute($fields);
-            return true;
-        } catch(PDOException $e) {
-            return $e->getMessage() . "\n";
+
+        if (count($fields)) {
+            $keys = array_keys($fields);
+            $values = '';
+            $x = 1;
+
+            foreach($fields as $field) {
+                $values .= '?';
+                if ($x < count($fields)) {
+                    $values .= ', ';
+                }
+                $x++;
+            }
+            $sql = "INSERT INTO {$table} (`" . implode('`, `', $keys) . "`) VALUES ({$values})";
+            if (!$this->query($sql, $fields)->error()) {
+                return true;
+            }
         }
     }
 
