@@ -238,3 +238,10 @@
 ul {
     list-style: none;
 }
+
+.HomeNames {
+    color: white;
+    margin-top: 3%;
+    margin-left: 1%;
+    font-size: 2vw;
+}

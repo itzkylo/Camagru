@@ -51,6 +51,7 @@ if(Input::exists()) {
                         <input type="hidden" name="token" value="<?php echo Token::generate(); ?>"/>
                         <button value="Login">Login</button>
                         <p class="message">Not Registered? <a href="register.php">Register</a></p>
+                        <p class="message">forgot password? <a href="forgotpassword.php">Click Here</a></p>
                     </form>
                 </div>
             </div>

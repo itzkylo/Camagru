@@ -11,10 +11,10 @@
             $data = $user->data();
         }
         ?>
-
-        <h3><?php echo escape($data->username); ?></h3>
-        <p>Full Name: <?php echo escape($data->name); ?></p>
-
+        <div class="HomeNames">
+            <h3>Welcome <?php echo escape($data->username); ?></h3>
+            <p>Full Name: <?php echo escape($data->name); ?></p>
+        </div>
         <?php
     }
 ?>
@@ -35,3 +35,5 @@ body {
 </style>
     </head>
         <body>
+
+        </body>
